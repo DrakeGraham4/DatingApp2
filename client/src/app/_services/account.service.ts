@@ -10,6 +10,7 @@ import { User } from '../_models/user';
 export class AccountService {
   baseUrl = 'https://localhost:5001/api/';
   //Observable to store user in // 1 because how many versions of current user we will store
+  //Authguard will subscribe to this observable
   private currentUserSource = new ReplaySubject<User>(1);
   //By convention $ because it is an observable
   currentUser$ = this.currentUserSource.asObservable();
