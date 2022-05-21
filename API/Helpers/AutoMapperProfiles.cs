@@ -7,7 +7,7 @@ using API.Entities;
 using API.Extensions;
 using AutoMapper;
 
-//Maps from one object to another
+//NOTE Maps from one object to another
 
 namespace API.Helpers
 {
@@ -20,6 +20,8 @@ namespace API.Helpers
             src.Photos.FirstOrDefault(x => x.isMain).url))
             .ForMember(dest => dest.Age, opt => opt.MapFrom(src => src.DateOfBirth.CalculateAge()));
             CreateMap<Photo, PhotoDto>();
+            //NOTE From -----------> To
+            CreateMap<MemberUpdateDto, AppUser>();
 
         }
     }

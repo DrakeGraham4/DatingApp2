@@ -12,7 +12,7 @@ import { AccountService } from '../_services/account.service';
 })
 export class NavComponent implements OnInit {
   model: any = {}
-  // access this service from template
+  // NOTE access this service from template
   constructor(public accountService: AccountService, private router: Router,
     private toastr: ToastrService) { }
 

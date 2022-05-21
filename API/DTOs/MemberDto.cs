@@ -4,6 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using API.Entities;
 
+//NOTE Partial Views, never store in database, run in server
+
 namespace API.DTOs
 {
     public class MemberDto

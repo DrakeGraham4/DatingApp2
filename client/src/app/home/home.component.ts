@@ -19,7 +19,7 @@ export class HomeComponent implements OnInit {
   }
 
   cancelRegisterMode(event: boolean) {
-    //turns registerMode to false
+    //NOTE turns registerMode to false
     this.registerMode = event;
   }
 

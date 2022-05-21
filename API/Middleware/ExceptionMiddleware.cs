@@ -24,7 +24,7 @@ namespace API.Middleware
         //We have access to HttpContext because this is happening in the context of a http request
         public async Task InvokeAsync(HttpContext context)
         {
-            //Passing in HttpContext
+            //NOTE Passing in HttpContext
             try
             {
                 await _next(context);
@@ -33,7 +33,7 @@ namespace API.Middleware
             {
 
                 _logger.LogError(ex, ex.Message);
-                //Write out exception to response
+                //NOTE Write out exception to response
                 context.Response.ContentType = "application/json";
                 //500
                 context.Response.StatusCode = (int)HttpStatusCode.InternalServerError;
@@ -41,7 +41,7 @@ namespace API.Middleware
                 //Creating Response
                 //Checking environment, are we running in development mode?
                 var response = _env.IsDevelopment()
-                //Ternary operator to say what we are going to do if this is our development mode
+                //NOTE Ternary operator to say what we are going to do if this is our development mode
                 //Creating new exception using our own Api Exception Class from Api.Errors
                 //In case StackTrace is null, add ? as to not cause an exception within your exception
                     ? new ApiException(context.Response.StatusCode, ex.Message, ex.StackTrace?.ToString())

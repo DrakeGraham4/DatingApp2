@@ -9,7 +9,7 @@ namespace API.Entities
         public string url { get; set; }
         public bool isMain { get; set; }
         public string PublicId { get; set; }
-        //Fully Defining the relationship between AppUser and photos
+        //NOTE Fully Defining the relationship between AppUser and photos
         public AppUser AppUser { get; set; }
         public int AppUserId { get; set; }
 

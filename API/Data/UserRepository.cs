@@ -60,7 +60,7 @@ namespace API.Data
 
         public void Update(AppUser user)
         {
-            //Updates and adds flag to entity if modified
+            //NOTE Updates and adds flag to entity if modified
             _context.Entry(user).State = EntityState.Modified;
         }
     }

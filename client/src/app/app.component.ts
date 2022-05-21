@@ -15,7 +15,7 @@ export class AppComponent implements OnInit {
   constructor(private accountService: AccountService) { }
   
   ngOnInit() {
-    //calls method when initailizing component
+    //NOTE calls method when initailizing component
     this.setCurrentUser();
   }
 

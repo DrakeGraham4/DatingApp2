@@ -22,11 +22,11 @@ export class ErrorInterceptor implements HttpInterceptor {
           switch (error.status) {
             case 400:
               if (error.error.errors) {
-                //push errors into array
+                //NOTE push errors into array
                 const modalStateErrors = [];
                 for (const key in error.error.errors) {
                   if (error.error.errors[key]) {
-                    //Flatten the array of errors
+                    //NOTE Flatten the array of errors
                     modalStateErrors.push(error.error.errors[key])
                   }
                 }
